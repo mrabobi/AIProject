@@ -23,6 +23,13 @@ Artificial Intelligence Project
     - Identificarea euristicilor de suprafata si obtinerea scorului: M.R.A. & T.B.I.
     - Aplicarea si adaptarea euristicilor: P.R. & M.R.A.
   - Integration: P.R.
+- Deadlines:
+  - [✅] [12.12.2019] Organizarea diagramelor si a documentatiei
+  - [❌] [22.12.2019] Interfata grafica
+  - [❌] [05.01.2020] Colectarea datelor si inceperea modulului de procesare a datelor
+  - [❌] [12.01.2020] Finalizarea modulului de procesare a datelor
+  - [❌] [14.01.2020] Rezolvarea bug-urilor minore si finalizarea
+  - [❌] [15.12.2019] Update la ReadMe 
 - Links:
   - [PROJECT DIAGRAM](../master/project_diagram.png)
   - [PROJECT GRAPHIC IDEA](../master/project_idea.png)
