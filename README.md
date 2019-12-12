@@ -13,8 +13,8 @@ Artificial Intelligence Project
   - GUI: tkinter
 
 - Links:
-  - [PROJECT DIAGRAM](../blob/master/project_diagram.png)
-  - [PROJECT GRAPHIC IDEA](../blob/master/project_idea.png)
+  - [PROJECT DIAGRAM](../master/project_diagram.png)
+  - [PROJECT GRAPHIC IDEA](../master/project_idea.png)
   
 - Teacher:
   - [Diana Trandabăț](https://profs.info.uaic.ro/~dtrandabat/index.php)
