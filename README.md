@@ -2,7 +2,6 @@
 ## 🧠 AIProject 🧠
 Artificial Intelligence Project
 
-[logo]: https://pbs.twimg.com/profile_images/1407493674/uaic_emblema.png "Logo Title Text 2"
 
 - Project description
   - The summary of a text by means of heuristics of surface exclusively
@@ -15,9 +14,14 @@ Artificial Intelligence Project
 - Abordarea modulelor:
   - GUI(frontend): M.R.A. & T.B.I.
   - Services(backend):
-    - Eliminarea enumeratiilor
-    - Eliminarea adverbelor si adjectivelor
-    
+    - Identificarea personajelor: M.R.A.
+    - Conversia la persoana a 3-a: T.B.I.
+    - Eliminarea enumeratiilor: P.R.
+    - Eliminarea adverbelor si adjectivelor: P.R.
+    - Recunoasterea actiunilor importante: M.R.A.
+    - Transformarea dialogului in povestire: T.B.I.
+    - Identificarea euristicilor de suprafata si obtinerea scorului: M.R.A. & T.B.I.
+    - Aplicarea si adaptarea euristicilor: P.R. & M.R.A.
   - Integration: P.R.
 - Links:
   - [PROJECT DIAGRAM](../master/project_diagram.png)
