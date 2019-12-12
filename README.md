@@ -12,7 +12,13 @@ Artificial Intelligence Project
   - IDE: Jetbrains PyCharm Community 2019
   - Programming language: Python
   - GUI: tkinter
-
+- Abordarea modulelor:
+  - GUI(frontend): M.R.A. & T.B.I.
+  - Services(backend):
+    - Eliminarea enumeratiilor
+    - Eliminarea adverbelor si adjectivelor
+    
+  - Integration: P.R.
 - Links:
   - [PROJECT DIAGRAM](../master/project_diagram.png)
   - [PROJECT GRAPHIC IDEA](../master/project_idea.png)
