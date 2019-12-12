@@ -5,6 +5,7 @@ Artificial Intelligence Project
 [logo]: https://pbs.twimg.com/profile_images/1407493674/uaic_emblema.png "Logo Title Text 2"
 
 - Project description
+  - The summary of a text by means of heuristics of surface exclusively
   - [Click here](https://docs.google.com/document/d/e/2PACX-1vQU1k2Ou1QfkznyX4eq07QNWD6ghPA1DEgcy8qHGWUs6i_hk7Bxh5M5_x6Us_vZtKrJ2mstANLfMFZf/pub)
 
 - Specs:
