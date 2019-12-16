@@ -36,7 +36,10 @@ Artificial Intelligence Project
   
 - Teacher:
   - [Diana Trandabăț](https://profs.info.uaic.ro/~dtrandabat/index.php)
-  
+
+- Status:
+  - ![Status](https://i.imgur.com/7soIOwD.png)
+
 - Team:
   - Traistar Bianca - Ioana
   - Miron Robert - Andrei
