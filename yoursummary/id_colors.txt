@@ -1,0 +1,2 @@
+background = e0c4d3
+dungi = 75022d
