@@ -25,8 +25,8 @@ Artificial Intelligence Project
   - Integration: P.R.
 - Deadlines:
   - [✅] [12.12.2019] Organizarea diagramelor si a documentatiei
-  - [⌛] [22.12.2019] Interfata grafica
-  - [❌] [05.01.2020] Colectarea datelor si inceperea modulului de procesare a datelor
+  - [✅] [22.12.2019] Interfata grafica
+  - [⌛] [05.01.2020] Colectarea datelor si inceperea modulului de procesare a datelor
   - [❌] [12.01.2020] Finalizarea modulului de procesare a datelor
   - [❌] [14.01.2020] Rezolvarea bug-urilor minore si finalizarea
   - [❌] [16.01.2020] Update la ReadMe si prezentarea proiectului 
@@ -38,7 +38,7 @@ Artificial Intelligence Project
   - [Diana Trandabăț](https://profs.info.uaic.ro/~dtrandabat/index.php)
 
 - Status:
-  - ![Status](https://i.imgur.com/7soIOwD.png)
+  - ![Status](https://i.imgur.com/QJKj9o2.png)
 
 - Team:
   - Traistar Bianca - Ioana
