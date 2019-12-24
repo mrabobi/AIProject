@@ -26,8 +26,8 @@ Artificial Intelligence Project
 - Deadlines:
   - [✅] [12.12.2019] Organizarea diagramelor si a documentatiei
   - [✅] [22.12.2019] Interfata grafica
-  - [⌛] [05.01.2020] Colectarea datelor si inceperea modulului de procesare a datelor
-  - [❌] [12.01.2020] Finalizarea modulului de procesare a datelor
+  - [✅] [05.01.2020] Colectarea datelor si inceperea modulului de procesare a datelor
+  - [⌛] [12.01.2020] Finalizarea modulului de procesare a datelor
   - [❌] [14.01.2020] Rezolvarea bug-urilor minore si finalizarea
   - [❌] [16.01.2020] Update la ReadMe si prezentarea proiectului 
 - Links:
