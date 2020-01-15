@@ -1,41 +1,99 @@
+import codecs
+import os
 from tkinter import *
 from tkinter.messagebox import showinfo
 from tkinter import ttk, filedialog, scrolledtext
 from tkinter.ttk import Combobox
+from nltk.tokenize import word_tokenize, sent_tokenize
 
+from numpy import unicode
+
+import backend
 
 def popup_showinfo():
     showinfo("ABOUT US", "This program aims to reduce the number of words in a text! Powered by [TBI][MRA][PR]")
 
 
 def generate_text(dev, percentage):
-    dev.final_text = "lol"
+    dev.final_text = ""
+    final_txt = ""
+    text = dev.txt.get("1.0", END)
     percentage = int(percentage[:-1])
+    dev.final_text = text
+
+    print(backend.count_of_words(text))
+
+    if backend.summary_status(backend.count_of_words(text),backend.count_of_words(dev.final_text),percentage):
+        dev.final_text, len_deleted = backend.removeDialogue(text)
+        print("First delete = " + str(len_deleted))
+    if backend.summary_status(backend.count_of_words(text), backend.count_of_words(dev.final_text), percentage):
+        dev.final_text, len_deleted = backend.remove_brackets(dev.final_text)
+
+        print("Second delete = " + str(len_deleted))
+        #print(final_txt)
+    if backend.summary_status(backend.count_of_words(text), backend.count_of_words(dev.final_text), percentage):
+        dev.final_text, len_deleted = backend.remove_quotes(dev.final_text)
+
+        print("Third delete = " + str(len_deleted))
+        #print(final_txt)
+    if backend.summary_status(backend.count_of_words(text), backend.count_of_words(dev.final_text), percentage):
+        dev.final_text = backend.remove_enum(dev.final_text)
+
+        print("Fourth delete = " + str(backend.count_of_words(text) - backend.count_of_words(dev.final_text)))
+        #print(final_txt)
+    if backend.summary_status(backend.count_of_words(text), backend.count_of_words(dev.final_text), percentage):
+
+        new_text = dev.final_text
+        tokenized_text = sent_tokenize(new_text)
+        l_total = backend.count_of_words(new_text)
+        dict = backend.words_score(new_text)
+
+        my_list = sorted(dict.items(), key=lambda kv: (kv[1], kv[0]), reverse=True)
+
+        while backend.summary_status(l_total, backend.words_in_mylist(my_list), percentage):
+            if len(my_list) == 1:
+                break
+            my_list.pop()
+
+
+        list_of_sentc = []
+        for index in my_list:
+            list_of_sentc.append(index[0])
+
+        for index in tokenized_text:
+            if index in list_of_sentc:
+                final_txt = final_txt + index
+
+        print("Algorithm delete: " + str(backend.count_of_words(text) - backend.count_of_words(dev.final_text)))
+
+    print(dev.final_text)
+    if final_txt != "":
+
+        dev.final_text = final_txt
+    dev.final_text = dev.final_text.rstrip(os.linesep)
     dev.txt_output.delete('1.0', END)
     dev.txt_output.insert(INSERT, dev.final_text)
 
-    label = Label(dev.root, text="Words count: " + str(len(dev.final_text.split())), background="#e0c4d3", fg="#75022d")
+
+    label = Label(dev.root, text="Words count: " + str(len(dev.final_text.split(' '))), background="#e0c4d3", fg="#75022d")
     label.place(x=750, y=545)
 
 
 def function_save_as(dev):
-    f = filedialog.asksaveasfile(mode='w', defaultextension=".txt")
-    if f is None:
+    savelocation = filedialog.asksaveasfilename()
+    if savelocation == '':
         return
-
-    f.write(dev.final_text)
-    f.close()
-    showinfo("Successfully!", "You saved your text!")
-
+    with open(savelocation, 'w',encoding='utf-8') as outfile:
+        outfile.write(dev.final_text)
+        outfile.close()
+        showinfo("Successfully!", "You saved your text!")
 
 def function_add_text(dev):
-    f = filedialog.askopenfile(title="Select a file", filetypes=((".txt files", "*.txt"), ("all files", "*")))
-    if f is None:
-        return
-    dev.final_text = f.read()
-    dev.txt.insert(INSERT, dev.final_text)
-    f.close()
-    showinfo("Successfully!", "You imported your text!")
+    with codecs.open(filedialog.askopenfilename(filetypes=[("Text files", "*.txt")]), encoding='utf-8') as f:
+        dev.final_text = f.read()
+        dev.txt.insert(INSERT, dev.final_text)
+        f.close()
+        showinfo("Successfully!", "You imported your text!")
 
 
 def main():
@@ -63,6 +121,7 @@ def main():
     label.place(x=47, y=357)
     label = Label(dev.root, text="OUTPUT", background="#e0c4d3", fg="#75022d")
     label.place(x=800, y=375)
+
     middle_line = Frame(dev.root, width=800, heigh=4, bg="#75022d", relief=SUNKEN)
     middle_line.place(x=50, y=375)
 
@@ -89,9 +148,9 @@ def main():
 
     label = Label(dev.root, text="PERCENTAGE", background="#e0c4d3", fg="#75022d")
     label.place(x=165, y=195)
-    v = [str(x) + '%' for x in range(50, 105, 5)]
+    v = [str(x) + '%' for x in range(10, 55, 5)]
     combo = Combobox(dev.root, state="readonly", values=v, width=15, height=19)
-    combo.set("50%")
+    combo.set("10%")
     combo.place(x=151, y=213)
 
     button_add_input = ttk.Button(dev.root, text="IMPORT", style="TButton", command=lambda: function_add_text(dev))
