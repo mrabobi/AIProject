@@ -23,7 +23,7 @@ Artificial Intelligence Project
     - Eliminarea dialogului
     - Identificarea euristicilor de suprafata si obtinerea scorului
     - Aplicarea si adaptarea euristicilor
-    - Integration
+    - Integrare
 - Deadlines:
   - [✅] [12.12.2019] Organizarea diagramelor si a documentatiei
   - [✅] [22.12.2019] Interfata grafica
